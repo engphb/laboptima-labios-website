@@ -105,6 +105,12 @@ export const services = [
   },
   {
     id: 4,
+    title: "Máquina Universal de Ensaios Eletromecânicos",
+    description: "Realização de testes mecânicos destrutivos e não destrutivos em diversos materiais. Avalia propriedades como resistência, elasticidade e durabilidade através de testes de tração, compressão, flexão e cisalhamento.",
+    icon: Zap,
+  },
+  {
+    id: 5,
     title: "Consultoria em Inovação",
     description: "Apoio técnico-científico para empresas no desenvolvimento de novos produtos e patentes.",
     icon: Lightbulb,
