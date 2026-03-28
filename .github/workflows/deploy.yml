@@ -31,16 +31,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
 
       - name: Instalar dependências
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build do site
         run: pnpm --filter @workspace/lab-website run build
         env:
           NODE_ENV: production
-          PORT: 3000
           BASE_PATH: /laboptima-labios-website/
 
       - name: Copiar index.html para 404.html (SPA routing)
