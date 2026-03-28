@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, FileText } from "lucide-react";
+import { Link } from "wouter";
 import { publications } from "@/data/mock";
 
 export function Publications() {
@@ -14,9 +15,12 @@ export function Publications() {
               Nossos resultados são divulgados nas mais prestigiadas revistas científicas internacionais.
             </p>
           </div>
-          <button className="px-6 py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200 transition-colors shrink-0">
+          <Link
+            href="/publicacoes"
+            className="px-6 py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200 transition-colors shrink-0 inline-block"
+          >
             Ver Todas Publicações
-          </button>
+          </Link>
         </div>
 
         <div className="space-y-4">
