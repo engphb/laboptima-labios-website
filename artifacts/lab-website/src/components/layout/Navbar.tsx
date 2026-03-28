@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Beaker } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/data/mock";
 
@@ -41,13 +41,11 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-            isScrolled
-              ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
-              : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
-          }`}>
-            <Beaker className="w-6 h-6" />
-          </div>
+          <img
+            src="/images/logo-lab.png"
+            alt="Logo LabOPTIMA | LaBioS"
+            className="w-10 h-10 object-contain rounded-full"
+          />
           <div className="leading-tight">
             <span className={`font-display font-bold text-xl tracking-tight block transition-colors duration-300 ${
               isScrolled ? "text-slate-900" : "text-white drop-shadow-md"
