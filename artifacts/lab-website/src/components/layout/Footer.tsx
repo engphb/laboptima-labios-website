@@ -11,8 +11,10 @@ export function Footer() {
                 <Beaker className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display font-bold text-2xl text-white tracking-tight block">LabOPTIMA</span>
-                <span className="text-slate-400 text-xs leading-snug block mt-1">Laboratório de Otimização, Produção e Tecnologias<br/>Inteligentes Multidisciplinares e Analíticas</span>
+                <span className="font-display font-bold text-2xl text-white tracking-tight block">
+                  LabOPTIMA <span className="text-white/40 font-light">|</span> LaBioS
+                </span>
+                <span className="text-slate-400 text-xs leading-snug block mt-1">Laboratórios Integrados de Pesquisa Científica</span>
               </div>
             </div>
             <p className="text-slate-400 text-lg max-w-md leading-relaxed">
@@ -38,15 +40,16 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>Instituto de Pesquisa Avançada<br />Av. das Ciências, 1000 - Bloco B<br />São Paulo, SP - 01234-567</span>
+                <span>LabOPTIMA<br />Universidade Federal do Rio de Janeiro
+                  Cidade Universitária – Av. Horácio Macedo, 2.030<br />Rio de Janeiro, RJ - 01234-567</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <span>+55 (11) 3091-0000</span>
+                <span>+55 (21) 99663-6877</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <span>contato@labavancado.edu.br</span>
+                <span>fernando_gomes@ima.ufrj.br</span>
               </li>
             </ul>
           </div>
@@ -54,7 +57,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Laboratório de Pesquisa Avançada. Todos os direitos reservados.
+            © {new Date().getFullYear()} LabOPTIMA | LaBioS. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">Privacidade</a>

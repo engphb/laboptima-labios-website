@@ -46,8 +46,11 @@ export function Navbar() {
             <Beaker className="w-6 h-6" />
           </div>
           <div className="leading-tight">
-            <span className="font-display font-bold text-xl tracking-tight text-white drop-shadow-md block">LabOPTIMA</span>
+            <span className="font-display font-bold text-xl tracking-tight text-white drop-shadow-md block">
+              LabOPTIMA <span className="text-white/50 font-light">|</span> LaBioS
+            </span>
             <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas</span>
+            <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Biopolímeros e Sensores</span>
           </div>
         </a>
 

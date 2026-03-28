@@ -25,7 +25,7 @@ export function About() {
                   alt="Logo"
                   className="w-16 h-16 bg-white p-2 rounded-xl mb-4"
                 />
-                <h3 className="text-white font-display font-bold text-2xl">15+ Anos de Excelência</h3>
+                <h3 className="text-white font-display font-bold text-2xl">Anos de Excelência</h3>
               </div>
             </div>
           </motion.div>
@@ -59,7 +59,7 @@ export function About() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-900 mb-2">Visão</h4>
-                  <p className="text-slate-600">Ser reconhecido internacionalmente como um centro de excelência e inovação em tecnologias avançadas até 2030.</p>
+                  <p className="text-slate-600">Ser reconhecido internacionalmente como um centro de excelência e inovação em tecnologias avançadas.</p>
                 </div>
               </div>
 
