@@ -2,13 +2,12 @@
 
 echo "Enviando alterações para o GitHub..."
 
-git push --force https://engphb:$GITHUB_PERSONAL_ACCESS_TOKEN@github.com/engphb/laboptima-labios-website.git main
+git push --force https://engphb:$GITHUB_PERSONAL_ACCESS_TOKEN@github.com/engphb/laboptima-labios-website.git HEAD:main
 
 if [ $? -eq 0 ]; then
   echo ""
-  echo "Pronto! Site atualizado com sucesso."
-  echo "Em cerca de 2 minutos a nova versão estará disponível em:"
-  echo "https://engphb.github.io/laboptima-labios-website/"
+  echo "Pronto! Código enviado com sucesso para o GitHub."
+  echo "O deploy vai iniciar automaticamente em alguns segundos."
 else
   echo ""
   echo "Erro ao enviar. Verifique se o token GITHUB_PERSONAL_ACCESS_TOKEN está configurado."
