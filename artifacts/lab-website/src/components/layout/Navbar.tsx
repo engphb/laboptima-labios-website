@@ -12,7 +12,6 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Simple scrollspy
       const sections = navLinks.map((link) => link.href.substring(1));
       let current = "";
       for (const section of sections) {
@@ -36,21 +35,35 @@ export function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
+            isScrolled
+              ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+              : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+          }`}>
             <Beaker className="w-6 h-6" />
           </div>
           <div className="leading-tight">
-            <span className="font-display font-bold text-xl tracking-tight text-white drop-shadow-md block">
-              LaBioS <span className="text-white/50 font-light">|</span> LabOPTIMA
+            <span className={`font-display font-bold text-xl tracking-tight block transition-colors duration-300 ${
+              isScrolled ? "text-slate-900" : "text-white drop-shadow-md"
+            }`}>
+              LaBioS <span className={`font-light ${isScrolled ? "text-slate-400" : "text-white/50"}`}>|</span> LabOPTIMA
             </span>
-            <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Biopolímeros e Sensores</span>
-            <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas</span>
+            <span className={`text-xs font-normal hidden sm:block transition-colors duration-300 ${
+              isScrolled ? "text-slate-500" : "text-white/70"
+            }`}>
+              Laboratório de Biopolímeros e Sensores
+            </span>
+            <span className={`text-xs font-normal hidden sm:block transition-colors duration-300 ${
+              isScrolled ? "text-slate-500" : "text-white/70"
+            }`}>
+              Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas
+            </span>
           </div>
         </a>
 
@@ -62,13 +75,21 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors text-white hover:text-white/80`}
+                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
+                  isScrolled
+                    ? isActive
+                      ? "text-primary"
+                      : "text-slate-700 hover:text-primary"
+                    : "text-white hover:text-white/80"
+                }`}
               >
                 {link.name}
                 {isActive && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute inset-0 rounded-full bg-primary/10 -z-10"
+                    className={`absolute inset-0 rounded-full -z-10 ${
+                      isScrolled ? "bg-primary/10" : "bg-white/10"
+                    }`}
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -79,7 +100,9 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 text-slate-600 hover:text-primary transition-colors"
+          className={`lg:hidden p-2 transition-colors ${
+            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/80"
+          }`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
