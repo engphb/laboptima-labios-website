@@ -37,9 +37,9 @@ export function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Nossa História</h2>
-            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">O Laboratório Avançado</h3>
+            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Os Laboratórios</h3>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Fundado em 2008, nosso laboratório nasceu da necessidade de integrar diferentes disciplinas científicas para solucionar problemas complexos. Hoje, somos referência nacional em pesquisa translacional, unindo ciência básica e aplicações tecnológicas.
+              Nossos laboratórios nasceram da necessidade de integrar diferentes disciplinas científicas para solucionar problemas complexos. Hoje, somos referência nacional em pesquisa translacional, unindo ciência e aplicações tecnológicas.
             </p>
 
             <div className="space-y-6">
@@ -59,7 +59,7 @@ export function About() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-900 mb-2">Visão</h4>
-                  <p className="text-slate-600">Ser reconhecido internacionalmente como um centro de excelência e inovação em tecnologias avançadas.</p>
+                  <p className="text-slate-600">Ser reconhecido como um centro de excelência e inovação em tecnologias avançadas e formação de recursos humanos especializados.</p>
                 </div>
               </div>
 

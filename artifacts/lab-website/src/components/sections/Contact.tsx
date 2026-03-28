@@ -49,7 +49,7 @@ export function Contact() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
               
               <div className="relative z-10">
-                <h3 className="text-3xl font-display font-bold mb-6">Fale Conosco</h3>
+                <h3 className="text-3xl font-display font-bold mb-6 text-white">Fale Conosco</h3>
                 <p className="text-blue-100 mb-12 text-lg">
                   Tem interesse em nossas pesquisas ou gostaria de utilizar nossos serviços? Mande uma mensagem.
                 </p>
@@ -60,9 +60,9 @@ export function Contact() {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1">Endereço</h5>
+                      <h5 className="font-semibold text-lg mb-1 text-white">Endereço</h5>
                       <p className="text-blue-100 leading-relaxed">
-                        LabOPTIMA | LaBioS<br/>
+                        LaBioS | LabOPTIMA<br/>
                         Rua Moniz Aragão, 360 - Cidade Universitária
                         Universidade Federal do Rio de Janeiro
                         Centro de Tecnologia II
@@ -77,7 +77,7 @@ export function Contact() {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1">Telefone</h5>
+                      <h5 className="font-semibold text-lg mb-1 text-white">Telefone</h5>
                       <p className="text-blue-100">+55 (21)  996636877</p>
                     </div>
                   </div>
@@ -87,7 +87,7 @@ export function Contact() {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1">E-mail</h5>
+                      <h5 className="font-semibold text-lg mb-1 text-white">E-mail</h5>
                       <p className="text-blue-100">fernando_gomes@ima.ufrj.br</p>
                     </div>
                   </div>

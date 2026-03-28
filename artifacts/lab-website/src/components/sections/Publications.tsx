@@ -10,9 +10,7 @@ export function Publications() {
           <div className="max-w-2xl">
             <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Produção Científica</h2>
             <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Publicações Recentes</h3>
-            <p className="text-lg text-slate-600">
-              Nossos resultados são divulgados nas mais prestigiadas revistas científicas internacionais.
-            </p>
+
           </div>
           <button className="px-6 py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200 transition-colors shrink-0">
             Ver Todas Publicações

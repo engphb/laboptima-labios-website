@@ -12,7 +12,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="font-display font-bold text-2xl text-white tracking-tight block">
-                  LabOPTIMA <span className="text-white/40 font-light">|</span> LaBioS
+                  LaBioS <span className="text-white/40 font-light">|</span> LabOPTIMA
                 </span>
                 <span className="text-slate-400 text-xs leading-snug block mt-1">Laboratórios Integrados de Pesquisa Científica</span>
               </div>
@@ -40,7 +40,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>LabOPTIMA|LaBioS<br />Universidade Federal do Rio de Janeiro
+                <span>LaBioS | LabOPTIMA<br />Universidade Federal do Rio de Janeiro
                   Rua Moniz Aragão, 360 - Cidade Universitária
                   Universidade Federal do Rio de Janeiro
                   Centro de Tecnologia II<br />Rio de Janeiro, RJ - 21941-914</span>
@@ -59,7 +59,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} LabOPTIMA | LaBioS. Todos os direitos reservados.
+            © {new Date().getFullYear()} LaBioS | LabOPTIMA. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">Privacidade</a>

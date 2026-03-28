@@ -47,10 +47,10 @@ export function Navbar() {
           </div>
           <div className="leading-tight">
             <span className="font-display font-bold text-xl tracking-tight text-white drop-shadow-md block">
-              LabOPTIMA <span className="text-white/50 font-light">|</span> LaBioS
+              LaBioS <span className="text-white/50 font-light">|</span> LabOPTIMA
             </span>
-            <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas</span>
             <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Biopolímeros e Sensores</span>
+            <span className="text-white/70 text-xs font-normal hidden sm:block">Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas</span>
           </div>
         </a>
 

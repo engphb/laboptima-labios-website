@@ -10,7 +10,7 @@ export function Infrastructure() {
           <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Nossas Instalações</h2>
           <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Infraestrutura de Ponta</h3>
           <p className="text-lg text-slate-600">
-            Contamos com mais de 800m² de laboratórios equipados com tecnologia de última geração para experimentação e análises complexas.
+            Nossos laboratórios são equipados com tecnologia de última geração para experimentação e análises complexas.
           </p>
         </div>
 
