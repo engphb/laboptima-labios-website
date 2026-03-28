@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
 import { services } from "@/data/mock";
 
 export function Services() {
@@ -35,14 +34,6 @@ export function Services() {
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
                 <p className="text-slate-400 mb-8">{service.description}</p>
-                <ul className="space-y-3">
-                  {['Laudo certificado', 'Alta precisão', 'Suporte técnico'].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-slate-300 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             );
           })}
