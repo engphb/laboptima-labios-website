@@ -30,9 +30,6 @@ export default function AllPublications() {
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-slate-900 mb-4">
               Todas as Publicações
             </h1>
-            <p className="text-lg text-slate-600 max-w-2xl">
-              Toda a produção científica dos laboratórios LabOPTIMA e LaBioS, publicada nas mais prestigiadas revistas científicas internacionais.
-            </p>
           </div>
 
           <div className="mb-8">
