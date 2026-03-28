@@ -62,9 +62,12 @@ export function Contact() {
                     <div>
                       <h5 className="font-semibold text-lg mb-1">Endereço</h5>
                       <p className="text-blue-100 leading-relaxed">
-                        Instituto de Pesquisa Avançada<br/>
-                        Av. das Ciências, 1000 - Bloco B<br/>
-                        São Paulo, SP - 01234-567
+                        LabOPTIMA<br/>
+                        Rua Moniz Aragão, 360 - Cidade Universitária
+                        Universidade Federal do Rio de Janeiro
+                        Centro de Tecnologia II
+                         <br/>
+                        Rio de Janeiro, RJ - 21941-914
                       </p>
                     </div>
                   </div>
@@ -75,7 +78,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h5 className="font-semibold text-lg mb-1">Telefone</h5>
-                      <p className="text-blue-100">+55 (11) 3091-0000</p>
+                      <p className="text-blue-100">+55 (21)  996636877</p>
                     </div>
                   </div>
 
@@ -85,7 +88,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h5 className="font-semibold text-lg mb-1">E-mail</h5>
-                      <p className="text-blue-100">contato@labavancado.edu.br</p>
+                      <p className="text-blue-100">fernando_gomes@ima.ufrj.br</p>
                     </div>
                   </div>
                 </div>
