@@ -1,4 +1,4 @@
-import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2 } from "lucide-react";
+import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2, Thermometer } from "lucide-react";
 
 export const navLinks = [
   { name: "Pesquisa", href: "#pesquisa" },
@@ -92,6 +92,12 @@ export const services = [
   },
   {
     id: 3,
+    title: "DSC – Calorímetro Diferencial de Varredura",
+    description: "Medição de transições térmicas como fusão, cristalização e transições vítreas.",
+    icon: Thermometer,
+  },
+  {
+    id: 4,
     title: "Consultoria em Inovação",
     description: "Apoio técnico-científico para empresas no desenvolvimento de novos produtos e patentes.",
     icon: Lightbulb,
