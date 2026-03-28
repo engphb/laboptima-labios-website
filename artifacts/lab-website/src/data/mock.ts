@@ -1,4 +1,4 @@
-import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2, Thermometer } from "lucide-react";
+import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2, Thermometer, Pill } from "lucide-react";
 
 export const navLinks = [
   { name: "Pesquisa", href: "#pesquisa" },
@@ -41,7 +41,7 @@ export const researchLines = [
     id: 5,
       title: "Encapsulamento de Fármacos",
       description: "Desenvolvimento de sistemas poliméricos para encapsulamento de princípios ativos farmacêuticos.",
-      icon: Zap,
+      icon: Pill,
       },
 ];
 
