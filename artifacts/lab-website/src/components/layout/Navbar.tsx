@@ -44,7 +44,7 @@ export function Navbar() {
           <img
             src="/images/logo-lab.png"
             alt="Logo LabOPTIMA | LaBioS"
-            className="w-20 h-20 object-contain"
+            className="w-40 h-40 object-contain"
           />
           <div className="leading-tight">
             <span className={`font-display font-bold text-xl tracking-tight block transition-colors duration-300 ${
