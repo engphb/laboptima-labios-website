@@ -125,17 +125,17 @@ export const news = [
 export const team = [
   {
     id: 1,
-    name: "Dr. Roberto Almeida",
-    role: "Investigador Principal",
-    bio: "Ph.D. pelo MIT, especialista em nanotecnologia e coordenador geral do laboratório desde 2015.",
-    initials: "RA",
+    name: "Dr. Francisco Silva",
+    role: "Pesquisador de Pós-Doutorado",
+    bio: "Foco em Caracterização de Materiais, Microfluidica, Processamento e Análise de Imagens, Microscopia Digital, Microtomografia de raios-x, Modelagem de rede de poros, Inteligência Artificial.",
+    initials: "Dr.",
   },
   {
     id: 2,
-    name: "Dra. Mariana Silva",
-    role: "Pesquisadora de Pós-Doutorado",
-    bio: "Foca em aplicações de machine learning em sistemas biológicos. Vencedora do prêmio Jovem Cientista 2024.",
-    initials: "MS",
+    name: "MSc. Jaciara Santos",
+    role: "Pesquisadora Doutoranda",
+    bio: "Foco em aplicações em uso de nanopartículas magnéticas para a dessulfurização de combustíveis fosseis.",
+    initials: "MSc.",
   },
   {
     id: 3,
