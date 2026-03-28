@@ -62,7 +62,7 @@ export function Contact() {
                     <div>
                       <h5 className="font-semibold text-lg mb-1">Endereço</h5>
                       <p className="text-blue-100 leading-relaxed">
-                        LabOPTIMA<br/>
+                        LabOPTIMA | LaBioS<br/>
                         Rua Moniz Aragão, 360 - Cidade Universitária
                         Universidade Federal do Rio de Janeiro
                         Centro de Tecnologia II

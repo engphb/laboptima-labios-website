@@ -40,8 +40,10 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>LabOPTIMA<br />Universidade Federal do Rio de Janeiro
-                  Cidade Universitária – Av. Horácio Macedo, 2.030<br />Rio de Janeiro, RJ - 01234-567</span>
+                <span>LabOPTIMA|LaBioS<br />Universidade Federal do Rio de Janeiro
+                  Rua Moniz Aragão, 360 - Cidade Universitária
+                  Universidade Federal do Rio de Janeiro
+                  Centro de Tecnologia II<br />Rio de Janeiro, RJ - 21941-914</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
