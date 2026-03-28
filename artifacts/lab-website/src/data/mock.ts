@@ -33,7 +33,7 @@ export const researchLines = [
   {
     id: 4,
     title: "Inteligência Artificial Aplicada",
-    description: "Modelagem de redes neurais para predição de estruturas proteicas e análise de big data genômico.",
+    description: "Modelagem de redes neurais para predições e otimizações e análise de dados e big data.",
     icon: Brain,
   },
 ];
