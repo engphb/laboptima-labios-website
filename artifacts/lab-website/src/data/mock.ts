@@ -80,14 +80,14 @@ export const publications = [
 export const services = [
   {
     id: 1,
-    title: "Análise de Microscopia Eletrônica",
-    description: "Caracterização morfológica e estrutural de amostras em escala nanométrica com alta resolução.",
+    title: "Análise de Microscopia Óptica",
+    description: "Caracterização morfológica e estrutural de amostras em escala com alta resolução.",
     icon: Microscope,
   },
   {
     id: 2,
-    title: "Sequenciamento Genômico",
-    description: "Serviço completo de sequenciamento de nova geração (NGS) com análise bioinformática integrada.",
+    title: "Análise de EDX",
+    description: "Caracterização da composição elementar de amostras.",
     icon: Database,
   },
   {
