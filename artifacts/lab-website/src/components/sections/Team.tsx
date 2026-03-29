@@ -1,6 +1,36 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Mail, GraduationCap } from "lucide-react";
 import { team } from "@/data/mock";
+
+function getLattesPhotoUrl(lattesUrl: string): string | null {
+  if (!lattesUrl) return null;
+  const match = lattesUrl.match(/lattes\.cnpq\.br\/(\d+)/);
+  if (!match) return null;
+  return `https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=${match[1]}`;
+}
+
+function MemberPhoto({ member }: { member: typeof team[0] }) {
+  const [imgError, setImgError] = useState(false);
+  const photoUrl = getLattesPhotoUrl(member.lattes);
+
+  if (photoUrl && !imgError) {
+    return (
+      <img
+        src={photoUrl}
+        alt={member.name}
+        className="w-full h-full object-cover rounded-full"
+        onError={() => setImgError(true)}
+      />
+    );
+  }
+
+  return (
+    <span className="text-2xl font-display font-bold text-slate-300 group-hover:text-primary transition-colors">
+      {member.initials}
+    </span>
+  );
+}
 
 export function Team() {
   return (
@@ -26,22 +56,37 @@ export function Team() {
             >
               <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full mb-6 p-1 group-hover:scale-105 transition-transform duration-300">
                 <div className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
-                  <span className="text-3xl font-display font-bold text-slate-300 group-hover:text-primary transition-colors">
-                    {member.initials}
-                  </span>
+                  <MemberPhoto member={member} />
                 </div>
               </div>
+
               <h4 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h4>
               <p className="text-accent font-medium text-sm mb-4">{member.role}</p>
-              <p className="text-slate-600 text-sm mb-6 line-clamp-3">
-                {member.bio}
-              </p>
-              
+              <p className="text-slate-600 text-sm mb-6 line-clamp-3">{member.bio}</p>
+
               <div className="flex items-center justify-center gap-4 opacity-60 group-hover:opacity-100 transition-opacity">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-colors">
+                {member.lattes ? (
+                  <a
+                    href={member.lattes}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Currículo Lattes"
+                    className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-green-600 hover:text-white transition-colors"
+                  >
+                    <GraduationCap className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <span
+                    title="Currículo Lattes não disponível"
+                    className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-300 cursor-default"
+                  >
+                    <GraduationCap className="w-4 h-4" />
+                  </span>
+                )}
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-colors"
+                >
                   <Mail className="w-4 h-4" />
                 </a>
               </div>
