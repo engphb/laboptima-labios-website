@@ -36,12 +36,13 @@ export const researchLines = [
     description: "Modelagem de redes neurais para predições e otimizações e análise de dados e big data.",
     icon: Brain,
   },
-  {
+
+{
     id: 5,
-    title: "Encapsulamento de Fármacos",
-    description: "Desenvolvimento de sistemas poliméricos para encapsulamento de princípios ativos farmacêuticos.",
-    icon: Pill,
-  },
+      title: "Encapsulamento de Fármacos",
+      description: "Desenvolvimento de sistemas poliméricos para encapsulamento de princípios ativos farmacêuticos.",
+      icon: Pill,
+      },
 ];
 
 export const publications = [
@@ -114,11 +115,11 @@ export const services = [
     description: "Apoio técnico-científico para empresas no desenvolvimento de novos produtos e patentes.",
     icon: Lightbulb,
   },
-  {
-    id: 6,
-    title: "Automação por Inteligência Artificial",
-    description: "Uso de técnicas de machine learning para automação e otimização de processos.",
-    icon: Lightbulb,
+   {
+  id: 6,
+  title: "Automação por Inteligência Artificial",
+  description: "Uso de técnicas de machine learning para automação e otimização de processos.",
+  icon: Lightbulb,
   },
 ];
 
@@ -128,21 +129,21 @@ export const news = [
     title: "Laboratório recebe visita da Delegação do IMIP - Indonesia Morowali Industrial Park",
     date: "28 de Setembro, 2025",
     summary: "Nosso laboartório recebeu com grande honra a delegação do Indonesia Morowali Industrial Park (IMIP), que vieram conhecer de perto as nossas pesquisas e tecnologias em materiais avançados, biomateriais e soluções sustentáveis.",
-    imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=500&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=500&fit=crop", // abstract science
   },
   {
     id: 2,
     title: "Bolsa PIBIC",
     date: "28 de Setembro, 2025",
     summary: "Se você é estudante de Química e áreas afins e quer atuar em projetos, essa é a sua chance! Bolsa PIBIC disponível!.",
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop", // scientist
   },
   {
     id: 3,
     title: "Nova publicação aceita!",
     date: "28 de Setembro, 2025",
     summary: "O artigo aceito para publicação, liderado pelo professor Fernando Gomes, e suas alunas de doutorado do PENt Karine Velasco e Jaciara Santos, será publicado no Journal of Drug Delivery Science and Technology, referência mundial em tecnologia farmacêutica e biomateriais aplicados à saúde!.",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV8OMUumCqTFevycKm2k0AlaS-67a6TOy0JA&s?w=800&h=500&fit=crop",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV8OMUumCqTFevycKm2k0AlaS-67a6TOy0JA&s?w=800&h=500&fit=crop", // clean room
   },
 ];
 
@@ -150,10 +151,10 @@ export const team = [
   {
     id: 1,
     name: "Dr. Fernando Gomes",
+    photo: "fernando.jpg",
     role: "Pesquisador e Chefe dos Laboratórios de Pesquisa",
     bio: "Professor titular e pesquisador de referência em Ciência e Engenharia de Materiais, com formação sólida e trajetória marcada por continuidade, impacto e atualização constante.",
     initials: "FG",
-    photo: "fernando.jpg",
     lattes: "http://lattes.cnpq.br/3049721573449880",
   },
   {
