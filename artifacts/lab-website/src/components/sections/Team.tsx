@@ -6,7 +6,11 @@ import { team } from "@/data/mock";
 function MemberPhoto({ member }: { member: typeof team[0] }) {
   const [imgError, setImgError] = useState(false);
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  const photoSrc = member.photo ? `${base}/images/team/${member.photo}` : null;
+  const photoSrc = member.photo
+    ? member.photo.startsWith("http")
+      ? member.photo
+      : `${base}/images/team/${member.photo}`
+    : null;
 
   if (photoSrc && !imgError) {
     return (

@@ -163,7 +163,7 @@ export const team = [
     role: "Pesquisador de Pós-Doutorado",
     bio: "Foco em Propriedade Intelectual e Inovação.",
     initials: "LB",
-    photo: "luiz-baptista.png",
+    photo: "luiz-baptista.jpg",
     lattes: "http://lattes.cnpq.br/5443960773408167",
   },
   {
@@ -199,7 +199,7 @@ export const team = [
     role: "Pesquisadora Doutoranda",
     bio: "Desenvolvimento de nanopartículas magnéticas para a dessulfurização de combustíveis fosseis.",
     initials: "JS",
-    photo: "",
+    photo: "http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4055300Y7",
     lattes: "http://lattes.cnpq.br/3601078343220540",
   },
   {
