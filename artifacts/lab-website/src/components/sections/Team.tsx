@@ -19,6 +19,7 @@ function MemberPhoto({ member }: { member: typeof team[0] }) {
       <img
         src={photoUrl}
         alt={member.name}
+        referrerPolicy="no-referrer"
         className="w-full h-full object-cover rounded-full"
         onError={() => setImgError(true)}
       />

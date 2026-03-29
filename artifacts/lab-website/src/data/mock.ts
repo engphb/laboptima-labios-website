@@ -148,7 +148,7 @@ export const team = [
     role: "Pesquisador e Chefe dos Laboratórios de Pesquisa",
     bio: "Professor titular e pesquisador de referência em Ciência e Engenharia de Materiais, com formação sólida e trajetória marcada por continuidade, impacto e atualização constante.",
     initials: "FG",
-    lattes: "",
+    lattes: "http://lattes.cnpq.br/3049721573449880",
   },
   {
     id: 2,
@@ -156,7 +156,7 @@ export const team = [
     role: "Pesquisador de Pós-Doutorado",
     bio: "Foco em Propriedade Intelectual e Inovação.",
     initials: "LB",
-    lattes: "",
+    lattes: "http://lattes.cnpq.br/5443960773408167",
   },
   {
     id: 3,
@@ -164,7 +164,7 @@ export const team = [
     role: "Pesquisador de Pós-Doutorado",
     bio: "Foco em: Caracterização de Materiais, Microfluidica, Processamento e Análise de Imagens, Microscopia, Inteligência Artificial.",
     initials: "FS",
-    lattes: "",
+    lattes: "http://lattes.cnpq.br/8480597715627519",
   },
   {
     id: 4,
@@ -172,7 +172,7 @@ export const team = [
     role: "Doutoranda",
     bio: "Desenvolvimento de Microsistemas nanoestruturadas para catalise e conversão de biodiesel apartir de oléo naturais.",
     initials: "DB",
-    lattes: "",
+    lattes: " http://lattes.cnpq.br/3934019582598385",
   },
   {
     id: 5,
@@ -188,7 +188,7 @@ export const team = [
     role: "Pesquisadora Doutoranda",
     bio: "Desenvolvimento de nanopartículas magnéticas para a dessulfurização de combustíveis fosseis.",
     initials: "JS",
-    lattes: "",
+    lattes: "http://lattes.cnpq.br/3601078343220540",
   },
   {
     id: 7,
