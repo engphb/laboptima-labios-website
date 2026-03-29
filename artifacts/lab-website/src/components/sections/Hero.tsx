@@ -41,7 +41,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed font-light"
           >
-            Laboratório multidisciplinar dedicado à investigação científica de ponta, integrando biotecnologia, nanomateriais e inteligência artificial para solucionar os maiores desafios da sociedade.
+            Localizados na UFRJ, os nossos laboratórios são multidisciplinares e dedicados à investigação científica de ponta, integrando biotecnologia, nanomateriais e inteligência artificial para solucionar desafios da sociedade.
           </motion.p>
 
           <motion.div
