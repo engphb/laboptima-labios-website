@@ -3,23 +3,16 @@ import { motion } from "framer-motion";
 import { Mail, GraduationCap } from "lucide-react";
 import { team } from "@/data/mock";
 
-function getLattesPhotoUrl(lattesUrl: string): string | null {
-  if (!lattesUrl) return null;
-  const match = lattesUrl.match(/lattes\.cnpq\.br\/(\d+)/);
-  if (!match) return null;
-  return `https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=${match[1]}`;
-}
-
 function MemberPhoto({ member }: { member: typeof team[0] }) {
   const [imgError, setImgError] = useState(false);
-  const photoUrl = getLattesPhotoUrl(member.lattes);
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const photoSrc = member.photo ? `${base}/images/team/${member.photo}` : null;
 
-  if (photoUrl && !imgError) {
+  if (photoSrc && !imgError) {
     return (
       <img
-        src={photoUrl}
+        src={photoSrc}
         alt={member.name}
-        referrerPolicy="no-referrer"
         className="w-full h-full object-cover rounded-full"
         onError={() => setImgError(true)}
       />

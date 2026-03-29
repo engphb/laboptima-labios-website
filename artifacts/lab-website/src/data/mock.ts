@@ -87,7 +87,7 @@ export const publications = [
 export const services = [
   {
     id: 1,
-    title: "Análise de Microscopia Óptica",
+    title: "Análise por Microscopia Digital",
     description: "Caracterização morfológica e estrutural de amostras em escala com alta resolução.",
     icon: Microscope,
   },
@@ -114,6 +114,12 @@ export const services = [
     title: "Consultoria em Inovação",
     description: "Apoio técnico-científico para empresas no desenvolvimento de novos produtos e patentes.",
     icon: Lightbulb,
+  },
+   {
+  id: 6,
+  title: "Caracterização de Meios Porosos",
+  description: "Apoio técnico-científico para empresas no desenvolvimento de novos produtos e patentes.",
+  icon: Lightbulb,
   },
 ];
 

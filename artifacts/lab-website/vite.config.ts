@@ -50,6 +50,14 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+    proxy: {
+      "/lattes-foto": {
+        target: "http://localhost:8080",
+        rewrite: (path) =>
+          path.replace(/^\/lattes-foto\/(.+)$/, "/api/lattes-photo/$1"),
+        changeOrigin: true,
+      },
+    },
   },
   preview: {
     port,

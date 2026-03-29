@@ -4,6 +4,10 @@
   "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [
+    {
+      "source": "/lattes-foto/:id",
+      "destination": "https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=:id"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
