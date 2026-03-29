@@ -10,7 +10,7 @@ export function Footer() {
               <img
                 src={`${import.meta.env.BASE_URL}images/logo-lab.png`}
                 alt="Logo LabOPTIMA | LaBioS"
-                className="w-20 h-20 object-contain"
+                className="w-[100px] h-[100px] object-contain"
               />
               <div>
                 <span className="font-display font-bold text-2xl text-white tracking-tight block">
