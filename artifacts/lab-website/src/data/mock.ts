@@ -151,10 +151,10 @@ export const team = [
   {
     id: 1,
     name: "Dr. Fernando Gomes",
-    photo: "fernando.jpg",
     role: "Pesquisador e Chefe dos Laboratórios de Pesquisa",
     bio: "Professor titular e pesquisador de referência em Ciência e Engenharia de Materiais, com formação sólida e trajetória marcada por continuidade, impacto e atualização constante.",
     initials: "FG",
+    photo: "fernando.jpg",
     lattes: "http://lattes.cnpq.br/3049721573449880",
   },
   {
