@@ -5,34 +5,36 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const formSchema = z.object({
-  name: z.string().min(2, "Nome deve ter no mínimo 2 caracteres"),
-  email: z.string().email("E-mail inválido"),
-  subject: z.string().min(5, "Assunto obrigatório"),
-  message: z.string().min(10, "A mensagem deve ter no mínimo 10 caracteres"),
-});
-
-type FormValues = z.infer<typeof formSchema>;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Contact() {
+  const { t } = useLanguage();
+  const c = t.contact;
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
+  const formSchema = z.object({
+    name: z.string().min(2, c.validation.name),
+    email: z.string().email(c.validation.email),
+    subject: z.string().min(5, c.validation.subject),
+    message: z.string().min(10, c.validation.message),
+  });
+
+  type FormValues = z.infer<typeof formSchema>;
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(formSchema),
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log("Form data:", data);
     setIsSubmitting(false);
     reset();
     toast({
-      title: "Mensagem Enviada!",
-      description: "Recebemos sua mensagem e entraremos em contato em breve.",
+      title: c.successTitle,
+      description: c.successDesc,
       variant: "default",
     });
   };
@@ -40,19 +42,16 @@ export function Contact() {
   return (
     <section id="contato" className="py-24 bg-slate-900 relative">
       <div className="absolute top-0 left-0 w-full h-1/2 bg-white pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-5">
-            {/* Contact Info */}
             <div className="lg:col-span-2 bg-primary p-10 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
-              
+
               <div className="relative z-10">
-                <h3 className="text-3xl font-display font-bold mb-6 text-white">Fale Conosco</h3>
-                <p className="text-blue-100 mb-12 text-lg">
-                  Tem interesse em nossas pesquisas ou gostaria de utilizar nossos serviços? Mande uma mensagem.
-                </p>
+                <h3 className="text-3xl font-display font-bold mb-6 text-white">{c.title}</h3>
+                <p className="text-blue-100 mb-12 text-lg">{c.description}</p>
 
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
@@ -60,15 +59,8 @@ export function Contact() {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1 text-white">Endereço</h5>
-                      <p className="text-blue-100 leading-relaxed">
-                        LaBioS | LabOPTIMA<br/>
-                        Rua Moniz Aragão, 360 - Cidade Universitária
-                        Universidade Federal do Rio de Janeiro
-                        Centro de Tecnologia II
-                         <br/>
-                        Rio de Janeiro, RJ - 21941-914
-                      </p>
+                      <h5 className="font-semibold text-lg mb-1 text-white">{c.address.label}</h5>
+                      <p className="text-blue-100 leading-relaxed whitespace-pre-line">{c.address.text}</p>
                     </div>
                   </div>
 
@@ -77,8 +69,8 @@ export function Contact() {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1 text-white">Telefone</h5>
-                      <p className="text-blue-100">+55 (21)  996636877</p>
+                      <h5 className="font-semibold text-lg mb-1 text-white">{c.phone.label}</h5>
+                      <p className="text-blue-100">+55 (21) 99663-6877</p>
                     </div>
                   </div>
 
@@ -87,7 +79,7 @@ export function Contact() {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-lg mb-1 text-white">E-mail</h5>
+                      <h5 className="font-semibold text-lg mb-1 text-white">{c.email.label}</h5>
                       <p className="text-blue-100">fernando_gomes@ima.ufrj.br</p>
                     </div>
                   </div>
@@ -95,28 +87,27 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Form */}
             <div className="lg:col-span-3 p-10 lg:p-12 bg-slate-50">
-              <h3 className="text-2xl font-bold text-slate-900 mb-8">Envie uma Mensagem</h3>
-              
+              <h3 className="text-2xl font-bold text-slate-900 mb-8">{c.formTitle}</h3>
+
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Nome Completo</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{c.fields.name}</label>
                     <input
                       {...register("name")}
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.name ? 'border-destructive focus:ring-destructive/20' : 'border-slate-200 focus:border-primary focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
-                      placeholder="Seu nome"
+                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.name ? "border-destructive focus:ring-destructive/20" : "border-slate-200 focus:border-primary focus:ring-primary/20"} focus:outline-none focus:ring-4 transition-all`}
+                      placeholder={c.fields.namePlaceholder}
                     />
                     {errors.name && <span className="text-destructive text-sm mt-1 block">{errors.name.message}</span>}
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">E-mail</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">{c.fields.email}</label>
                     <input
                       {...register("email")}
                       type="email"
-                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.email ? 'border-destructive focus:ring-destructive/20' : 'border-slate-200 focus:border-primary focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
+                      className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.email ? "border-destructive focus:ring-destructive/20" : "border-slate-200 focus:border-primary focus:ring-primary/20"} focus:outline-none focus:ring-4 transition-all`}
                       placeholder="seu@email.com"
                     />
                     {errors.email && <span className="text-destructive text-sm mt-1 block">{errors.email.message}</span>}
@@ -124,22 +115,22 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">Assunto</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">{c.fields.subject}</label>
                   <input
                     {...register("subject")}
-                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.subject ? 'border-destructive focus:ring-destructive/20' : 'border-slate-200 focus:border-primary focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
-                    placeholder="Ex: Parceria de pesquisa"
+                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.subject ? "border-destructive focus:ring-destructive/20" : "border-slate-200 focus:border-primary focus:ring-primary/20"} focus:outline-none focus:ring-4 transition-all`}
+                    placeholder={c.fields.subjectPlaceholder}
                   />
                   {errors.subject && <span className="text-destructive text-sm mt-1 block">{errors.subject.message}</span>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">Mensagem</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">{c.fields.message}</label>
                   <textarea
                     {...register("message")}
                     rows={5}
-                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.message ? 'border-destructive focus:ring-destructive/20' : 'border-slate-200 focus:border-primary focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all resize-none`}
-                    placeholder="Como podemos ajudar?"
+                    className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.message ? "border-destructive focus:ring-destructive/20" : "border-slate-200 focus:border-primary focus:ring-primary/20"} focus:outline-none focus:ring-4 transition-all resize-none`}
+                    placeholder={c.fields.messagePlaceholder}
                   ></textarea>
                   {errors.message && <span className="text-destructive text-sm mt-1 block">{errors.message.message}</span>}
                 </div>
@@ -149,7 +140,7 @@ export function Contact() {
                   disabled={isSubmitting}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-200"
                 >
-                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                  {isSubmitting ? c.sending : c.send}
                   {!isSubmitting && <Send className="w-5 h-5" />}
                 </button>
               </form>

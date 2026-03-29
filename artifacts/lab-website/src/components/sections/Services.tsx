@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { services } from "@/data/mock";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Services() {
+  const { t } = useLanguage();
+  const s = t.services;
+
   return (
     <section id="servicos" className="py-24 bg-slate-900 relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-accent font-semibold tracking-wide uppercase text-sm mb-3">Parcerias e Extensão</h2>
-          <h3 className="text-4xl font-display font-bold text-white mb-6">Serviços Oferecidos</h3>
-          <p className="text-lg text-slate-300">
-            Colocamos nossa infraestrutura e expertise à disposição da comunidade acadêmica e do setor produtivo.
-          </p>
+          <h2 className="text-accent font-semibold tracking-wide uppercase text-sm mb-3">{s.subtitle}</h2>
+          <h3 className="text-4xl font-display font-bold text-white mb-6">{s.title}</h3>
+          <p className="text-lg text-slate-300">{s.description}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, idx) => {
+          {s.items.map((service, idx) => {
             const Icon = service.icon;
             return (
               <motion.div

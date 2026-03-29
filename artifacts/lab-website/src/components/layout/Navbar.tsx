@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
-import { navLinks } from "@/data/mock";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const [location] = useLocation();
+  const { lang, setLang, t } = useLanguage();
 
   const isHome = location === "/";
   const useDark = !isHome || isScrolled;
@@ -16,8 +17,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
-      const sections = navLinks.map((link) => link.href.substring(1));
+      const sections = t.nav.map((link) => link.href.substring(1));
       let current = "";
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -31,17 +31,14 @@ export function Navbar() {
       }
       setActiveSection(current);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [t]);
 
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        useDark
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+        useDark ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -52,6 +49,35 @@ export function Navbar() {
             className="w-40 h-40 object-contain"
           />
           <div className="leading-tight">
+            {/* Language Switcher */}
+            <div className="flex items-center gap-1 mb-1">
+              <button
+                onClick={(e) => { e.preventDefault(); setLang("pt"); }}
+                className={`text-xs font-semibold px-2 py-0.5 rounded transition-all ${
+                  lang === "pt"
+                    ? "bg-primary text-white"
+                    : useDark
+                    ? "text-slate-400 hover:text-primary"
+                    : "text-white/60 hover:text-white"
+                }`}
+              >
+                PT
+              </button>
+              <span className={`text-xs ${useDark ? "text-slate-300" : "text-white/40"}`}>|</span>
+              <button
+                onClick={(e) => { e.preventDefault(); setLang("en"); }}
+                className={`text-xs font-semibold px-2 py-0.5 rounded transition-all ${
+                  lang === "en"
+                    ? "bg-primary text-white"
+                    : useDark
+                    ? "text-slate-400 hover:text-primary"
+                    : "text-white/60 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <span className={`font-display font-bold text-xl tracking-tight block transition-colors duration-300 ${
               useDark ? "text-slate-900" : "text-white drop-shadow-md"
             }`}>
@@ -60,19 +86,21 @@ export function Navbar() {
             <span className={`text-xs font-normal hidden sm:block transition-colors duration-300 ${
               useDark ? "text-slate-500" : "text-white/70"
             }`}>
-              Laboratório de Biopolímeros e Sensores
+              {lang === "pt" ? "Laboratório de Biopolímeros e Sensores" : "Laboratory of Biopolymers and Sensors"}
             </span>
             <span className={`text-xs font-normal hidden sm:block transition-colors duration-300 ${
               useDark ? "text-slate-500" : "text-white/70"
             }`}>
-              Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas
+              {lang === "pt"
+                ? "Laboratório de Otimização, Produção e Tecnologias Inteligentes Multidisciplinares e Analíticas"
+                : "Laboratory of Optimization, Production and Intelligent Multidisciplinary and Analytical Technologies"}
             </span>
           </div>
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => {
+          {t.nav.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a
@@ -80,9 +108,7 @@ export function Navbar() {
                 href={link.href}
                 className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
                   useDark
-                    ? isActive
-                      ? "text-primary"
-                      : "text-slate-700 hover:text-primary"
+                    ? isActive ? "text-primary" : "text-slate-700 hover:text-primary"
                     : "text-white hover:text-white/80"
                 }`}
               >
@@ -121,7 +147,7 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 right-0 bg-white border-b border-slate-100 shadow-xl p-4 lg:hidden flex flex-col gap-2"
           >
-            {navLinks.map((link) => (
+            {t.nav.map((link) => (
               <a
                 key={link.name}
                 href={link.href}

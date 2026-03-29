@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
-import { news } from "@/data/mock";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function News() {
+  const { t } = useLanguage();
+  const n = t.news;
+
   return (
     <section id="noticias" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Atualizações</h2>
-            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Últimas Notícias</h3>
-            <p className="text-lg text-slate-600">
-              Acompanhe as descobertas, eventos e novidades do nosso laboratório.
-            </p>
+            <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">{n.subtitle}</h2>
+            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">{n.title}</h3>
+            <p className="text-lg text-slate-600">{n.description}</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {news.map((item, idx) => (
+          {n.items.map((item, idx) => (
             <motion.article
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -42,11 +43,9 @@ export function News() {
                 <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   {item.title}
                 </h4>
-                <p className="text-slate-600 mb-6 line-clamp-3 flex-1">
-                  {item.summary}
-                </p>
+                <p className="text-slate-600 mb-6 line-clamp-3 flex-1">{item.summary}</p>
                 <div className="flex items-center text-primary font-medium group-hover:text-accent transition-colors">
-                  Ler matéria completa
+                  {n.readMore}
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

@@ -1,6 +1,21 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
+  const f = t.footer;
+
+  const linkHrefs: Record<string, string> = {
+    "Pesquisa": "#pesquisa",
+    "Publicações": "#publicacoes",
+    "Serviços": "#servicos",
+    "Equipe": "#equipe",
+    "Research": "#pesquisa",
+    "Publications": "#publicacoes",
+    "Services": "#servicos",
+    "Team": "#equipe",
+  };
+
   return (
     <footer className="bg-slate-900 pt-20 pb-10 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,20 +31,18 @@ export function Footer() {
                 <span className="font-display font-bold text-2xl text-white tracking-tight block">
                   LaBioS <span className="text-white/40 font-light">|</span> LabOPTIMA
                 </span>
-                <span className="text-slate-400 text-xs leading-snug block mt-1">Laboratórios Integrados de Pesquisa Científica</span>
+                <span className="text-slate-400 text-xs leading-snug block mt-1">{f.tagline}</span>
               </div>
             </div>
-            <p className="text-slate-400 text-lg max-w-md leading-relaxed">
-              Avançando as fronteiras do conhecimento científico através de pesquisa inovadora, excelência acadêmica e impacto na sociedade.
-            </p>
+            <p className="text-slate-400 text-lg max-w-md leading-relaxed">{f.description}</p>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-white mb-6 text-lg">Links Rápidos</h4>
+            <h4 className="font-display font-semibold text-white mb-6 text-lg">{f.quickLinks}</h4>
             <ul className="space-y-4">
-              {['Pesquisa', 'Publicações', 'Serviços', 'Equipe'].map((item) => (
+              {f.links.map((item) => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase().replace('ç', 'c').replace('õ', 'o')}`} className="text-slate-400 hover:text-accent transition-colors">
+                  <a href={linkHrefs[item] ?? "#"} className="text-slate-400 hover:text-accent transition-colors">
                     {item}
                   </a>
                 </li>
@@ -38,14 +51,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-white mb-6 text-lg">Contato</h4>
+            <h4 className="font-display font-semibold text-white mb-6 text-lg">{f.contact}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>LaBioS | LabOPTIMA<br />Universidade Federal do Rio de Janeiro
-                  Rua Moniz Aragão, 360 - Cidade Universitária
-                  Universidade Federal do Rio de Janeiro
-                  Centro de Tecnologia II<br />Rio de Janeiro, RJ - 21941-914</span>
+                <span>LaBioS | LabOPTIMA<br />Rua Moniz Aragão, 360 - Cidade Universitária<br />Rio de Janeiro, RJ - 21941-914</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
@@ -61,11 +71,11 @@ export function Footer() {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} LaBioS | LabOPTIMA. Todos os direitos reservados.
+            © {new Date().getFullYear()} LaBioS | LabOPTIMA. {f.rights}
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">Privacidade</a>
-            <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">Termos de Uso</a>
+            <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">{f.privacy}</a>
+            <a href="#" className="text-slate-500 hover:text-white transition-colors text-sm">{f.terms}</a>
           </div>
         </div>
       </div>
