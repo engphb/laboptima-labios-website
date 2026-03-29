@@ -163,7 +163,7 @@ export const team = [
     role: "Pesquisador de Pós-Doutorado",
     bio: "Foco em Propriedade Intelectual e Inovação.",
     initials: "LB",
-    photo: "",
+    photo: "luiz-baptista.png",
     lattes: "http://lattes.cnpq.br/5443960773408167",
   },
   {
