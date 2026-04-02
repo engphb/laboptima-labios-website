@@ -75,7 +75,7 @@ export function Footer() {
                   <img
                     src={`${import.meta.env.BASE_URL}images/ima.png`}
                     alt="IMA - Instituto de Macromoléculas"
-                    className="h-16 object-contain opacity-90"
+                    className="h-24 object-contain opacity-90"
                   />
                   <img
                     src={`${import.meta.env.BASE_URL}images/pent.png`}
