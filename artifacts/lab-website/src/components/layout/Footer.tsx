@@ -73,9 +73,14 @@ export function Footer() {
                     className="h-16 object-contain opacity-80"
                   />
                   <img
-                    src={`${import.meta.env.BASE_URL}images/coppe.png`}
-                    alt="COPPE/UFRJ"
-                    className="h-16 object-contain opacity-80"
+                    src={`${import.meta.env.BASE_URL}images/ima.png`}
+                    alt="IMA - Instituto de Macromoléculas"
+                    className="h-16 object-contain opacity-90"
+                  />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/pent.png`}
+                    alt="PENt - Programa de Engenharia da Nanotecnologia COPPE/UFRJ"
+                    className="h-16 object-contain opacity-90"
                   />
                 </div>
               </li>
