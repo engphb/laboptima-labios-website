@@ -2,6 +2,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { projects } from "@/data/mock";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { CalendarDays, Building2 } from "lucide-react";
 
 export function Projects() {
@@ -22,71 +29,79 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.map((project) => {
-            const title = lang === "en" ? project.titleEn : project.title;
-            const description = lang === "en" ? project.descriptionEn : project.description;
-            const type = lang === "en" ? project.typeEn : project.type;
-            const status = lang === "en" ? project.statusEn : project.status;
+        <div className="max-w-5xl mx-auto px-10">
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {projects.map((project) => {
+                const title = lang === "en" ? project.titleEn : project.title;
+                const description = lang === "en" ? project.descriptionEn : project.description;
+                const type = lang === "en" ? project.typeEn : project.type;
+                const status = lang === "en" ? project.statusEn : project.status;
 
-            return (
-              <Card
-                key={project.id}
-                className="group hover:shadow-lg transition-all duration-300 border border-border bg-card flex flex-col"
-              >
-                <CardContent className="p-6 flex flex-col h-full">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge className="text-xs bg-primary/10 text-primary border-0">
-                      {type}
-                    </Badge>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <CalendarDays className="w-3 h-3" />
-                      {project.year}
-                    </span>
-                  </div>
+                return (
+                  <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="group hover:shadow-lg transition-all duration-300 border border-border bg-card flex flex-col h-full">
+                      <CardContent className="p-6 flex flex-col h-full">
+                        <div className="flex items-center justify-between mb-4">
+                          <Badge className="text-xs bg-primary/10 text-primary border-0">
+                            {type}
+                          </Badge>
+                          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                            <CalendarDays className="w-3 h-3" />
+                            {project.year}
+                          </span>
+                        </div>
 
-                  {project.logo ? (
-                    <div className="h-14 flex items-center mb-4">
-                      <img
-                        src={project.logo}
-                        alt={`${project.partner} logo`}
-                        className="max-h-12 max-w-[140px] object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="h-14 flex items-center mb-4">
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Building2 className="w-6 h-6" />
-                        <span className="font-semibold text-foreground text-sm">
-                          {project.partner}
-                        </span>
-                      </div>
-                    </div>
-                  )}
+                        {project.logo ? (
+                          <div className="h-14 flex items-center mb-4">
+                            <img
+                              src={project.logo}
+                              alt={`${project.partner} logo`}
+                              className="max-h-12 max-w-[140px] object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <div className="h-14 flex items-center mb-4">
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <Building2 className="w-6 h-6" />
+                              <span className="font-semibold text-foreground text-sm">
+                                {project.partner}
+                              </span>
+                            </div>
+                          </div>
+                        )}
 
-                  <h3 className="font-bold text-foreground text-base mb-3 leading-snug group-hover:text-primary transition-colors">
-                    {title}
-                  </h3>
+                        <h3 className="font-bold text-foreground text-base mb-3 leading-snug group-hover:text-primary transition-colors">
+                          {title}
+                        </h3>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-                    {description}
-                  </p>
+                        <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                          {description}
+                        </p>
 
-                  <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
-                    <span className="flex items-center gap-1.5 text-xs text-green-600 font-medium">
-                      <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
-                      {status}
-                    </span>
-                    {!project.logo && (
-                      <span className="text-xs text-muted-foreground font-medium">
-                        {project.partner}
-                      </span>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+                        <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
+                          <span className="flex items-center gap-1.5 text-xs text-green-600 font-medium">
+                            <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
+                            {status}
+                          </span>
+                          {!project.logo && (
+                            <span className="text-xs text-muted-foreground font-medium">
+                              {project.partner}
+                            </span>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         <div className="text-center mt-10">
