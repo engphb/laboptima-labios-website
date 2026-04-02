@@ -283,6 +283,21 @@ export const projects = [
     type: "Fomento Nacional",
     typeEn: "National Grant",
   },
+  {
+    id: 4,
+    title: "Nanomateriais Aplicados a Petróleo e Biocombustíveis",
+    titleEn: "Nanomaterials Applied to Petroleum and Biofuels",
+    description: "Aplicação da nanotecnologia com a finalidade de melhorar propriedades ou inferir novas funcionalidades a materiais ou conjunto de materiais dentro da indústria de petróleo, a fim solucionar problemas operacionais desafiadores. Este projeto visa preparação de nanosistemas sólidos e líquidos sobre diferentes problemas ocorrentes na indústria de petróleo e biocombustíveis, utilizando a presença de argilominerais, polímeros, nanopartículas magnéticas, óleos vegetais, entre outros.",
+    descriptionEn: "Application of nanotechnology to improve properties or impart new functionalities to materials or sets of materials within the petroleum industry, in order to solve challenging operational problems. This project aims to prepare solid and liquid nanosystems to address different problems occurring in the petroleum and biofuel industry, using clay minerals, polymers, magnetic nanoparticles, and vegetable oils, among others.",
+    partner: "CAPES",
+    logo: "https://www.infoescola.com/wp-content/uploads/2017/05/capes.png",
+    status: "Concluído",
+    statusEn: "Completed",
+    year: 2016,
+    yearEnd: 2018,
+    type: "Fomento Nacional",
+    typeEn: "National Grant",
+  },
 ];
 
 export const infrastructureItems = [

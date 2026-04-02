@@ -34,6 +34,8 @@ export function Projects() {
               const description = lang === "en" ? project.descriptionEn : project.description;
               const type = lang === "en" ? project.typeEn : project.type;
               const status = lang === "en" ? project.statusEn : project.status;
+              const yearLabel = project.yearEnd ? `${project.year}–${project.yearEnd}` : String(project.year);
+              const isCompleted = project.status === "Concluído";
 
               return (
                 <AccordionItem
@@ -64,7 +66,7 @@ export function Projects() {
                           </Badge>
                           <span className="flex items-center gap-1 text-xs text-muted-foreground whitespace-nowrap">
                             <CalendarDays className="w-3 h-3" />
-                            {project.year}
+                            {yearLabel}
                           </span>
                         </div>
                       </div>
@@ -80,8 +82,8 @@ export function Projects() {
                     </p>
 
                     <div className="flex items-center justify-between pt-3 border-t border-border">
-                      <span className="flex items-center gap-1.5 text-xs text-green-600 font-medium">
-                        <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
+                      <span className={`flex items-center gap-1.5 text-xs font-medium ${isCompleted ? "text-slate-500" : "text-green-600"}`}>
+                        <span className={`w-2 h-2 rounded-full inline-block ${isCompleted ? "bg-slate-400" : "bg-green-500"}`} />
                         {status}
                       </span>
                       {!project.logo && (
