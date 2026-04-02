@@ -65,6 +65,13 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <span>fernando_gomes@ima.ufrj.br</span>
               </li>
+              <li className="pt-2">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/ufrj.png`}
+                  alt="UFRJ"
+                  className="h-10 object-contain opacity-80"
+                />
+              </li>
             </ul>
           </div>
         </div>
