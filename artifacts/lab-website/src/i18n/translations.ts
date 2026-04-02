@@ -40,8 +40,8 @@ export const translations = {
       learnMore: "Saiba mais sobre projetos em andamento",
       lines: [
         { id: 1, title: "Nanomateriais Avançados", description: "Desenvolvimento de novos materiais com propriedades quânticas e aplicações em supercondutividade e computação de nova geração.", icon: Atom },
-        { id: 2, title: "Biopolímeros", description: "Catálise heterogênea para produção de biodiesel, Síntese verde de nanopartículas metálicas, Dessulfurização de combustíveis, Purificação de Biocombustíveis, Hidrogênio Verde, Biofilmes para células fotovoltáicas.", icon: Dna },
-        { id: 3, title: "Energias Sustentáveis", description: "Pesquisa em células solares de perovskita e novas matrizes de armazenamento de energia de alta eficiência.", icon: Zap },
+        { id: 2, title: "Recuperação Ambiental", description: "Descomissionamento de poços de petróleo, Remoção de contaminantes de meios aquosos (óleo, metais pesados, corantes orgânicos), Identificação de Microplásticos.", icon: Dna },
+        { id: 3, title: "Energias Renováveis e Sustentabilidade", description: "Catálise heterogênea para produção de biodiesel, Síntese verde de nanopartículas metálicas, Dessulfurização de combustíveis, Purificação de Biocombustíveis, Hidrogênio Verde, Biofilmes para células fotovoltáicas.", icon: Zap },
         { id: 4, title: "Inteligência Artificial Aplicada", description: "Modelagem de redes neurais para predições e otimizações e análise de dados e big data.", icon: Brain },
         { id: 5, title: "Encapsulamento de Fármacos", description: "Desenvolvimento de sistemas poliméricos para encapsulamento de princípios ativos farmacêuticos.", icon: Pill },
       ],
@@ -181,8 +181,8 @@ export const translations = {
       learnMore: "Learn more about ongoing projects",
       lines: [
         { id: 1, title: "Advanced Nanomaterials", description: "Development of new materials with quantum properties and applications in superconductivity and next-generation computing.", icon: Atom },
-        { id: 2, title: "Biopolymers", description: "Heterogeneous catalysis for biodiesel production, green synthesis of metallic nanoparticles, fuel desulfurization, biofuel purification, green hydrogen, and biofilms for photovoltaic cells.", icon: Dna },
-        { id: 3, title: "Sustainable Energies", description: "Research on perovskite solar cells and new high-efficiency energy storage matrices.", icon: Zap },
+        { id: 2, title: "Environmental Recovery", description: "Decommissioning of oil wells, removal of contaminants from aqueous media (oil, heavy metals, organic dyes), and microplastics identification.", icon: Dna },
+        { id: 3, title: "Renewable Energies and Sustainability", description: "Heterogeneous catalysis for biodiesel production, green synthesis of metallic nanoparticles, fuel desulfurization, biofuel purification, green hydrogen, and biofilms for photovoltaic cells.", icon: Zap },
         { id: 4, title: "Applied Artificial Intelligence", description: "Neural network modeling for predictions and optimizations, data analysis and big data.", icon: Brain },
         { id: 5, title: "Drug Encapsulation", description: "Development of polymeric systems for the encapsulation of active pharmaceutical ingredients.", icon: Pill },
       ],
