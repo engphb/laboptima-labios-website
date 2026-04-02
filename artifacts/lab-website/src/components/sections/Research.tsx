@@ -48,9 +48,6 @@ export function Research() {
                   </div>
                   <h4 className="text-2xl font-display font-bold text-slate-900 mb-4">{line.title}</h4>
                   <p className="text-slate-600 leading-relaxed">{line.description}</p>
-                  <a href="#contato" className="inline-flex font-medium text-primary mt-6 hover:text-accent transition-colors group-hover:underline underline-offset-4">
-                    {r.learnMore} &rarr;
-                  </a>
                 </div>
               </motion.div>
             );
