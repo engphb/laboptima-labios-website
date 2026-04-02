@@ -66,21 +66,21 @@ export function Footer() {
                 <span>fernando_gomes@ima.ufrj.br</span>
               </li>
               <li className="pt-8">
-                <div className="flex items-start gap-0 -ml-34">
+                <div className="flex flex-wrap items-center gap-4">
                   <img
                     src={`${import.meta.env.BASE_URL}images/ufrj.png`}
                     alt="UFRJ"
-                    className="h-14 object-contain opacity-80"
+                    className="h-10 sm:h-12 object-contain opacity-80"
                   />
                   <img
                     src={`${import.meta.env.BASE_URL}images/ima.png`}
                     alt="IMA - Instituto de Macromoléculas"
-                    className="h-14 object-contain opacity-80"
+                    className="h-10 sm:h-12 object-contain opacity-80"
                   />
                   <img
                     src={`${import.meta.env.BASE_URL}images/pent.png`}
                     alt="PENt - Programa de Engenharia da Nanotecnologia COPPE/UFRJ"
-                    className="h-16 object-contain opacity-100"
+                    className="h-10 sm:h-12 object-contain opacity-100"
                   />
                 </div>
               </li>

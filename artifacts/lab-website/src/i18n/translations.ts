@@ -29,7 +29,7 @@ export const translations = {
       title: "Projetos de Pesquisa",
       description: "Projetos desenvolvidos em colaboração com parceiros industriais e com apoio de agências de fomento nacionais.",
       ongoing: "Em andamento",
-      contact: "Saiba mais ou colabore",
+      contact: "Saiba mais ou colabore conosco",
     },
     research: {
       subtitle: "Nossa Ciência",
@@ -64,7 +64,7 @@ export const translations = {
     about: {
       subtitle: "Nossa História",
       title: "Os Laboratórios",
-      description: "Nossos laboratórios nasceram da necessidade de integrar diferentes disciplinas científicas para solucionar problemas complexos. Hoje, somos referência nacional em pesquisa translacional, unindo ciência e aplicações tecnológicas.",
+      description: "Nossos laboratórios nasceram da necessidade de integrar diferentes disciplinas científicas para solucionar problemas complexos. Hoje, somos referência nacional em pesquisa, unindo ciência e aplicações tecnológicas.",
       yearsLabel: "Anos de Excelência",
       mission: { title: "Missão", text: "Gerar conhecimento científico de fronteira e formar pesquisadores de alto nível para impactar positivamente a sociedade e a indústria." },
       vision: { title: "Visão", text: "Ser reconhecido como um centro de excelência e inovação em tecnologias avançadas e formação de recursos humanos especializados." },
@@ -155,7 +155,7 @@ export const translations = {
       title: "Research Projects",
       description: "Projects developed in collaboration with industrial partners and supported by national funding agencies.",
       ongoing: "Ongoing",
-      contact: "Learn more or collaborate",
+      contact: "Learn more or collaborate with us",
     },
     research: {
       subtitle: "Our Science",
@@ -190,7 +190,7 @@ export const translations = {
     about: {
       subtitle: "Our History",
       title: "The Laboratories",
-      description: "Our laboratories were born from the need to integrate different scientific disciplines to solve complex problems. Today, we are a national reference in translational research, bridging science and technological applications.",
+      description: "Our laboratories were born from the need to integrate different scientific disciplines to solve complex problems. Today, we are a national reference in research, bridging science and technological applications.",
       yearsLabel: "Years of Excellence",
       mission: { title: "Mission", text: "Generate frontier scientific knowledge and train high-level researchers to positively impact society and industry." },
       vision: { title: "Vision", text: "To be recognized as a center of excellence and innovation in advanced technologies and training of specialized human resources." },
