@@ -70,12 +70,12 @@ export function Footer() {
                   <img
                     src={`${import.meta.env.BASE_URL}images/ufrj.png`}
                     alt="UFRJ"
-                    className="h-10 object-contain opacity-80"
+                    className="h-16 object-contain opacity-80"
                   />
                   <img
                     src={`${import.meta.env.BASE_URL}images/ima.jpg`}
                     alt="IMA - Instituto de Macromoléculas"
-                    className="h-10 object-contain rounded-lg opacity-90"
+                    className="h-16 object-contain rounded-lg opacity-90"
                   />
                 </div>
               </li>
