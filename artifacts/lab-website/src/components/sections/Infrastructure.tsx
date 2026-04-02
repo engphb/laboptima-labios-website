@@ -30,7 +30,7 @@ export function Infrastructure() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-lg transition-shadow duration-300 flex flex-col"
               >
-                <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
+                <div className="relative w-full aspect-[4/3] bg-white overflow-hidden">
                   {item.photo ? (
                     <img
                       src={`${import.meta.env.BASE_URL}${item.photo}`}
@@ -38,7 +38,7 @@ export function Infrastructure() {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-slate-100 to-blue-50">
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-white">
                       <Microscope className="w-12 h-12 text-primary/30" />
                       <span className="text-3xl font-bold text-primary/20 tracking-widest">
                         {item.acronym}
