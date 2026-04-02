@@ -1,4 +1,4 @@
-import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2, Thermometer, Pill } from "lucide-react";
+import { Brain, Dna, Lightbulb, Microscope, Zap, Database, Atom, FileText, CheckCircle2, Thermometer, Pill, Leaf } from "lucide-react";
 
 export const navLinks = [
   { name: "Pesquisa", href: "#pesquisa" },
@@ -22,7 +22,7 @@ export const researchLines = [
     id: 2,
     title: "Recuperação Ambiental",
     description: "Descomissionamento de poços de petróleo, Remoção de contaminantes de meios aquosos (óleo, metais pesados, corantes orgânicos), Identificação de Microplásticos.",
-    icon: Dna,
+    icon: Leaf,
   },
   {
     id: 3,
