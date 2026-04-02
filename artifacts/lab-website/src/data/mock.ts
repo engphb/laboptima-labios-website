@@ -15,7 +15,7 @@ export const researchLines = [
   {
     id: 1,
     title: "Nanomateriais Avançados",
-    description: "Desenvolvimento de novos materiais com propriedades quânticas e aplicações em supercondutividade e computação de nova geração.",
+    description: "Desenvolvimento de novos materiais com propriedades modificadas.",
     icon: Atom,
   },
   {

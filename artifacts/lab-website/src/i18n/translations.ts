@@ -39,7 +39,7 @@ export const translations = {
         "Focamos em abordagens multidisciplinares para investigar problemas complexos na fronteira do conhecimento científico.",
       learnMore: "Saiba mais sobre projetos em andamento",
       lines: [
-        { id: 1, title: "Nanomateriais Avançados", description: "Desenvolvimento de novos materiais com propriedades quânticas e aplicações em supercondutividade e computação de nova geração.", icon: Atom },
+        { id: 1, title: "Nanomateriais Avançados", description: "Desenvolvimento de novos materiais com propriedades modificadas.", icon: Atom },
         { id: 2, title: "Recuperação Ambiental", description: "Descomissionamento de poços de petróleo, Remoção de contaminantes de meios aquosos (óleo, metais pesados, corantes orgânicos), Identificação de Microplásticos.", icon: Leaf },
         { id: 3, title: "Energias Renováveis e Sustentabilidade", description: "Catálise heterogênea para produção de biodiesel, Síntese verde de nanopartículas metálicas, Dessulfurização de combustíveis, Purificação de Biocombustíveis, Hidrogênio Verde, Biofilmes para células fotovoltáicas.", icon: Zap },
         { id: 4, title: "Inteligência Artificial Aplicada", description: "Modelagem de redes neurais para predições e otimizações e análise de dados e big data.", icon: Brain },
