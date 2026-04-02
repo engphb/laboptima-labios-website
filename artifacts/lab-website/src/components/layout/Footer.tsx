@@ -66,7 +66,7 @@ export function Footer() {
                 <span>fernando_gomes@ima.ufrj.br</span>
               </li>
               <li className="pt-2">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 -ml-1">
                   <img
                     src={`${import.meta.env.BASE_URL}images/ufrj.png`}
                     alt="UFRJ"
