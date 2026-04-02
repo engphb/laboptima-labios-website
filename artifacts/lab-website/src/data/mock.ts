@@ -20,14 +20,14 @@ export const researchLines = [
   },
   {
     id: 2,
-    title: "Biopolímeros",
-    description: "Engenharia de proteínas e edição genômica voltada para soluções terapêuticas inovadoras e medicina personalizada.",
+    title: "Recuperação Ambiental",
+    description: "Descomissionamento de poços de petróleo, Remoção de contaminantes de meios aquosos (óleo, metais pesados, corantes orgânicos), Identificação de Microplásticos.",
     icon: Dna,
   },
   {
     id: 3,
-    title: "Energias Sustentáveis",
-    description: "Pesquisa em células solares de perovskita e novas matrizes de armazenamento de energia de alta eficiência.",
+    title: "Energias Renováveis e Sustentabilidade",
+    description: "Catálise heterogênea para produção de biodiesel, Síntese verde de nanopartículas metálicas, Dessulfurização de combustíveis, Purificação de Biocombustíveis, Hidrogênio Verde, Biofilmes para células fotovoltáicas.",
     icon: Zap,
   },
   {
