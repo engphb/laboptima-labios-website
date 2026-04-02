@@ -77,6 +77,11 @@ export function Footer() {
                     alt="IMA - Instituto de Macromoléculas"
                     className="h-16 object-contain rounded-lg opacity-90"
                   />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/pent.jpg`}
+                    alt="PENt - Programa de Engenharia da Nanotecnologia COPPE/UFRJ"
+                    className="h-16 object-contain rounded-lg opacity-90"
+                  />
                 </div>
               </li>
             </ul>
