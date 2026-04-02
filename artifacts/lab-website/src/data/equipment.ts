@@ -35,4 +35,13 @@ export const equipment = [
     description: "Análise de absorção e transmitância de amostras na faixa ultravioleta e visível do espectro.",
     descriptionEn: "Analysis of absorption and transmittance of samples in the ultraviolet and visible range of the spectrum.",
   },
+  {
+    id: 5,
+    name: "Liofilizador",
+    nameEn: "Freeze Dryer",
+    acronym: "LIOF",
+    photo: "images/liofilizador.jpg",
+    description: "Remoção de água de amostras por sublimação a baixa temperatura e pressão, preservando a estrutura e atividade biológica dos materiais.",
+    descriptionEn: "Removal of water from samples by sublimation at low temperature and pressure, preserving the structure and biological activity of materials.",
+  },
 ];
