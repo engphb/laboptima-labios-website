@@ -44,4 +44,13 @@ export const equipment = [
     description: "Remoção de água de amostras por sublimação a baixa temperatura e pressão, preservando a estrutura e atividade biológica dos materiais.",
     descriptionEn: "Removal of water from samples by sublimation at low temperature and pressure, preserving the structure and biological activity of materials.",
   },
+  {
+    id: 6,
+    name: "Estufa com Circulação e Renovação de Ar",
+    nameEn: "Air Circulation and Renewal Oven",
+    acronym: "ESTUFA",
+    photo: "images/estufa.png",
+    description: "Secagem, esterilização e tratamento térmico de amostras com controle preciso de temperatura e renovação constante do ar interno.",
+    descriptionEn: "Drying, sterilization, and heat treatment of samples with precise temperature control and constant internal air renewal.",
+  },
 ];
