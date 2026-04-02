@@ -71,7 +71,7 @@ export default function AllPublications() {
                       className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      DOI: {pub.link.replace("https://doi.org/", "")}
+                      DOI: {pub.link.replace(/https?:\/\/(dx\.)?doi\.org\//, "")}
                     </a>
                   ) : (
                     <span className="inline-flex items-center gap-1.5 text-xs text-slate-400">

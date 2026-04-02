@@ -88,7 +88,7 @@ export const publications = [
     authors: "Fernando Gomes, Shekhar Bhansali, Viviane Valladão, Daniele Brandão, Gabriel Silva, Fabiola Maranhão, Kaushik Pal, Rossana Thiré, Joyce Araujo, Ariane Batista, Sabu Thomas, Nandakumar Kalarikkal, Samuel O. Oluwafemi, Tian Rong Li, Yuhua Wang",
     journal: "Recent Patents on Nanotechnology",
     year: 2025,
-    link: "",
+    link: "http://dx.doi.org/10.2174/0118722105366556250402051103",
     type: "Artigo",
   },
 ];
