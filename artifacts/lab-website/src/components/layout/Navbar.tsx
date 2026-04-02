@@ -99,14 +99,14 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5 ml-10">
           {t.nav.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
+                className={`relative px-2.5 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
                   useDark
                     ? isActive ? "text-primary" : "text-slate-700 hover:text-primary"
                     : "text-white hover:text-white/80"
