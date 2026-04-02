@@ -61,8 +61,8 @@ export const publications = [
     authors: "Nebu George Thomas, Fernando Gomes, Raneesh Balakrishnan, Rani Shine Raju, Neethu Ninan, Anju Rajan, Richard Bright, Sukumaran Anil, Thien Ngoc Le, Trong Quan Luu, T. Daniel Thangadurai, Bincy P.K., Sabu Thomas",
     journal: "International Journal of Pharmaceutics",
     year: 2026,
-    doi: "",
-    type: "Artigo Original",
+    link: "https://doi.org/10.1016/j.ijpharm.2025.126533",
+    type: "Artigo",
   },
   {
     id: 2,
@@ -70,8 +70,8 @@ export const publications = [
     authors: "S. Fernando Gomes Jr, Paulo Cesar Duarte Junior, Shirley Ferraz Crispilho, Hafsa Siddiqui, Jaciara Santos, Kaushik Pal, Aron José Pazin de Andrade, Himanshu Upadhyay",
     journal: "Wiley Interdisciplinary Reviews-Data Mining and Knowledge Discovery",
     year: 2026,
-    doi: "",
-    type: "Artigo Original",
+    link: "https://doi.org/10.1002/widm.70071",
+    type: "Artigo",
   },
   {
     id: 3,
@@ -79,8 +79,8 @@ export const publications = [
     authors: "Carlos Augusto Zanoni Souto, Fernando Gomes de Souza Jr., Kaushik Pal, José Teixeira de Seixas Filho, Helena Keiko Toma, Nidhi Asthana, Azmat Ali Khan, Sabiha Fatima",
     journal: "Journal of Molecular Structure",
     year: 2025,
-    doi: "",
-    type: "Artigo Original",
+    link: "https://doi.org/10.1016/j.molstruc.2024.139961",
+    type: "Artigo",
   },
   {
     id: 4,
@@ -88,8 +88,8 @@ export const publications = [
     authors: "Fernando Gomes, Shekhar Bhansali, Viviane Valladão, Daniele Brandão, Gabriel Silva, Fabiola Maranhão, Kaushik Pal, Rossana Thiré, Joyce Araujo, Ariane Batista, Sabu Thomas, Nandakumar Kalarikkal, Samuel O. Oluwafemi, Tian Rong Li, Yuhua Wang",
     journal: "Recent Patents on Nanotechnology",
     year: 2025,
-    doi: "",
-    type: "Artigo Original",
+    link: "",
+    type: "Artigo",
   },
 ];
 
