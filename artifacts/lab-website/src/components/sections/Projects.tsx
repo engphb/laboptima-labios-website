@@ -42,51 +42,39 @@ export function Projects() {
                   className="bg-card border border-border rounded-xl px-5 shadow-sm data-[state=open]:border-primary/40 transition-colors"
                 >
                   <AccordionTrigger className="hover:no-underline py-5 gap-4">
-                    <div className="flex items-center gap-4 text-left flex-1 min-w-0">
-                      {project.logo ? (
-                        <img
-                          src={project.logo}
-                          alt={`${project.partner} logo`}
-                          className="h-8 max-w-[80px] object-contain flex-shrink-0"
-                        />
-                      ) : (
-                        <div className="flex items-center gap-1.5 flex-shrink-0 text-muted-foreground">
-                          <Building2 className="w-4 h-4" />
-                          <span className="text-xs font-semibold text-foreground whitespace-nowrap">
-                            {project.partner}
+                    <div className="flex flex-col gap-2 text-left flex-1 min-w-0">
+                      <div className="flex items-center gap-3">
+                        {project.logo ? (
+                          <img
+                            src={project.logo}
+                            alt={`${project.partner} logo`}
+                            className="h-7 max-w-[72px] object-contain flex-shrink-0"
+                          />
+                        ) : (
+                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                            <Building2 className="w-4 h-4 text-muted-foreground" />
+                            <span className="text-xs font-semibold text-foreground whitespace-nowrap">
+                              {project.partner}
+                            </span>
+                          </div>
+                        )}
+                        <div className="flex items-center gap-2">
+                          <Badge className="text-xs bg-primary/10 text-primary border-0 whitespace-nowrap">
+                            {type}
+                          </Badge>
+                          <span className="flex items-center gap-1 text-xs text-muted-foreground whitespace-nowrap">
+                            <CalendarDays className="w-3 h-3" />
+                            {project.year}
                           </span>
                         </div>
-                      )}
-
-                      <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-foreground text-sm leading-snug line-clamp-2">
-                          {title}
-                        </p>
                       </div>
-
-                      <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
-                        <Badge className="text-xs bg-primary/10 text-primary border-0 whitespace-nowrap">
-                          {type}
-                        </Badge>
-                        <span className="flex items-center gap-1 text-xs text-muted-foreground whitespace-nowrap">
-                          <CalendarDays className="w-3 h-3" />
-                          {project.year}
-                        </span>
-                      </div>
+                      <p className="font-semibold text-foreground text-sm leading-snug">
+                        {title}
+                      </p>
                     </div>
                   </AccordionTrigger>
 
                   <AccordionContent className="pb-5">
-                    <div className="flex sm:hidden items-center gap-2 mb-3">
-                      <Badge className="text-xs bg-primary/10 text-primary border-0">
-                        {type}
-                      </Badge>
-                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                        <CalendarDays className="w-3 h-3" />
-                        {project.year}
-                      </span>
-                    </div>
-
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {description}
                     </p>
