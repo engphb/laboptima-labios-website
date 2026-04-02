@@ -65,19 +65,6 @@ export function Infrastructure() {
             );
           })}
         </div>
-
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-2xl px-8 py-5 shadow-sm">
-            <div>
-              <div className="text-3xl font-extrabold text-primary">R$ 15M+</div>
-              <div className="text-slate-500 text-sm">{inf.equipmentValue}</div>
-            </div>
-            <div className="w-px h-10 bg-slate-200 mx-2" />
-            <a href="#contato" className="text-primary font-medium hover:text-primary/80 transition-colors text-sm">
-              {inf.scheduleVisit} →
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
