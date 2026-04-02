@@ -66,31 +66,29 @@ export function Footer() {
                 <span>fernando_gomes@ima.ufrj.br</span>
               </li>
               <li className="pt-2">
-                <div className="flex flex-col items-center gap-3">
+                <div className="flex items-start gap-0 -ml-34">
                   <img
                     src={`${import.meta.env.BASE_URL}images/ufrj.png`}
                     alt="UFRJ"
                     className="h-14 object-contain opacity-80"
                   />
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/ima.png`}
-                      alt="IMA - Instituto de Macromoléculas"
-                      className="h-10 object-contain opacity-90"
-                    />
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/pent.png`}
-                      alt="PENt - Programa de Engenharia da Nanotecnologia COPPE/UFRJ"
-                      className="h-10 object-contain opacity-90"
-                    />
-                  </div>
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/ima.png`}
+                    alt="IMA - Instituto de Macromoléculas"
+                    className="h-14 object-contain opacity-80"
+                  />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/pent.png`}
+                    alt="PENt - Programa de Engenharia da Nanotecnologia COPPE/UFRJ"
+                    className="h-16 object-contain opacity-100"
+                  />
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} LaBioS | LabOPTIMA. {f.rights}
           </p>
