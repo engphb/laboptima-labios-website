@@ -4,7 +4,7 @@ export const equipment = [
     name: "Calorímetro Diferencial de Varredura",
     nameEn: "Differential Scanning Calorimeter",
     acronym: "DSC",
-    photo: null,
+    photo: "images/dsc.jpg",
     description: "Medição de fluxo de calor e transições térmicas em materiais com alta precisão.",
     descriptionEn: "Measurement of heat flow and thermal transitions in materials with high precision.",
   },

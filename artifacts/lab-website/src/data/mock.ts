@@ -101,7 +101,7 @@ export const services = [
     id: 3,
     title: "Calorímetro Diferencial de Varredura (DSC)",
     description: "Medição de transições térmicas como fusão, cristalização e transições vítreas.",
-    icon: Thermometer,
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-SV_styt6i0Wai_pWgAJLEn6XbQ5vs3MKg&s",
   },
   {
     id: 4,
