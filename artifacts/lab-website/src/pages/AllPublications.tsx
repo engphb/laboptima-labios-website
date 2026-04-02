@@ -63,15 +63,15 @@ export default function AllPublications() {
                     {pub.title}
                   </h2>
                   <p className="text-slate-500 text-sm leading-relaxed mb-3">{pub.authors}</p>
-                  {pub.doi ? (
+                  {pub.link && pub.link !== "#" ? (
                     <a
-                      href={`https://doi.org/${pub.doi}`}
+                      href={pub.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      DOI: {pub.doi}
+                      DOI: {pub.link.replace("https://doi.org/", "")}
                     </a>
                   ) : (
                     <span className="inline-flex items-center gap-1.5 text-xs text-slate-400">
