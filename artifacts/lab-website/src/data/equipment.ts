@@ -31,7 +31,7 @@ export const equipment = [
     name: "Espectrofotômetro de UV-Vis",
     nameEn: "UV-Vis Spectrophotometer",
     acronym: "UV-Vis",
-    photo: null,
+    photo: "images/uvvis.jpg",
     description: "Análise de absorção e transmitância de amostras na faixa ultravioleta e visível do espectro.",
     descriptionEn: "Analysis of absorption and transmittance of samples in the ultraviolet and visible range of the spectrum.",
   },
