@@ -13,7 +13,7 @@ export const equipment = [
     name: "Espectrômetro de Fluorescência de Raios X por Energia Dispersiva",
     nameEn: "Energy Dispersive X-ray Fluorescence Spectrometer",
     acronym: "EDX",
-    photo: null,
+    photo: "images/edx.jpg",
     description: "Análise elementar qualitativa e quantitativa de amostras sólidas, líquidas e em pó.",
     descriptionEn: "Qualitative and quantitative elemental analysis of solid, liquid, and powder samples.",
   },
