@@ -99,15 +99,15 @@ export const services = [
   },
   {
     id: 3,
-    title: "Calorímetro Diferencial de Varredura (DSC)",
-    description: "Medição de transições térmicas como fusão, cristalização e transições vítreas.",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-SV_styt6i0Wai_pWgAJLEn6XbQ5vs3MKg&s",
+    title: "Análise por Calorímetro Diferencial de Varredura (DSC)",
+    description: "Medição de transições térmicas como fusão, cristalização e transições vítreas em materiais.",
+    icon: Microscope,
   },
   {
     id: 4,
-    title: "Máquina Universal de Ensaios Eletromecânicos",
-    description: "Realização de testes mecânicos destrutivos e não destrutivos em diversos materiais. Avalia propriedades como resistência, elasticidade e durabilidade através de testes de tração, compressão, flexão e cisalhamento.",
-  imageUrl: "https://embracal.com/imagens/informacoes/maquina-universal-ensaios-emic-01.jpg",
+    title: "Ensaios Mecânicos (EMIC)",
+    description: "Testes de tração, compressão, flexão e cisalhamento para caracterização mecânica de materiais.",
+    icon: Database,
   },
   {
     id: 5,
