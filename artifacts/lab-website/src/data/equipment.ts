@@ -53,4 +53,13 @@ export const equipment = [
     description: "Secagem, esterilização e tratamento térmico de amostras com controle preciso de temperatura e renovação constante do ar interno.",
     descriptionEn: "Drying, sterilization, and heat treatment of samples with precise temperature control and constant internal air renewal.",
   },
+  {
+    id: 7,
+    name: "Capela de Exaustão de Gases",
+    nameEn: "Fume Hood",
+    acronym: "CAPELA",
+    photo: "images/capela.png",
+    description: "Proteção contra vapores, gases e poeiras tóxicas durante o manuseio de reagentes químicos, com exaustão forçada e painel frontal de segurança.",
+    descriptionEn: "Protection against toxic vapors, gases, and dust during chemical reagent handling, with forced exhaust and front safety panel.",
+  },
 ];
