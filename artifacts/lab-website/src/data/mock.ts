@@ -299,41 +299,9 @@ export const projects = [
   },
 ];
 
-export const equipment = [
-  {
-    id: 1,
-    name: "Calorímetro Diferencial de Varredura",
-    nameEn: "Differential Scanning Calorimeter",
-    acronym: "DSC",
-    photo: null,
-    description: "Medição de fluxo de calor e transições térmicas em materiais com alta precisão.",
-    descriptionEn: "Measurement of heat flow and thermal transitions in materials with high precision.",
-  },
-  {
-    id: 2,
-    name: "Espectrômetro de Fluorescência de Raios X por Energia Dispersiva",
-    nameEn: "Energy Dispersive X-ray Fluorescence Spectrometer",
-    acronym: "EDX",
-    photo: null,
-    description: "Análise elementar qualitativa e quantitativa de amostras sólidas, líquidas e em pó.",
-    descriptionEn: "Qualitative and quantitative elemental analysis of solid, liquid, and powder samples.",
-  },
-  {
-    id: 3,
-    name: "Máquina Universal de Ensaios Eletromecânicos",
-    nameEn: "Universal Electromechanical Testing Machine",
-    acronym: "EMIC",
-    photo: "images/emic.jpg",
-    description: "Realização de testes mecânicos destrutivos e não destrutivos em diversos materiais. Avalia propriedades como resistência, elasticidade e durabilidade através de testes de tração, compressão, flexão e cisalhamento.",
-    descriptionEn: "Performs destructive and non-destructive mechanical tests on various materials. Evaluates properties such as strength, elasticity, and durability through tensile, compression, flexion, and shear tests.",
-  },
-  {
-    id: 4,
-    name: "Espectrofotômetro de UV-Vis",
-    nameEn: "UV-Vis Spectrophotometer",
-    acronym: "UV-Vis",
-    photo: null,
-    description: "Análise de absorção e transmitância de amostras na faixa ultravioleta e visível do espectro.",
-    descriptionEn: "Analysis of absorption and transmittance of samples in the ultraviolet and visible range of the spectrum.",
-  },
+export const infrastructureItems = [
+  "Calorímetro Diferencial de Varredura (DSC)",
+  "Espectrômetro de Fluorescência de Raios X por Energia Dispersiva (EDX)",
+  "Máquina Universal de Ensaios Mecânicos (EMIC)",
+  "Espectrofotômetro de UV-Vis",
 ];

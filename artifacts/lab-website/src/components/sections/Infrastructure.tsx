@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Microscope } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { equipment } from "@/data/mock";
+import { equipment } from "@/data/equipment";
 
 export function Infrastructure() {
   const { t, lang } = useLanguage();
